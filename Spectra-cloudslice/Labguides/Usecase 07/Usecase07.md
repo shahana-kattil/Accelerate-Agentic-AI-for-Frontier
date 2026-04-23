@@ -68,51 +68,35 @@ all subsequent AI development and management activities will take place.
 Follow the steps below to complete the setup of your Microsoft Foundry
 project.
 
-1.  Open a browser and login to Azure portal at
-    +++https://ai.azure.com/templates+++ with your credentials.
-
-- Username - <+++@lab.CloudPortalCredential>(User1).Username+++
-
-- Password - <+++@lab.CloudPortalCredential(User1).Password>+++
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image1.png)
-
-![A login box with a red box and blue box with text AI-generated content
-may be incorrect.](./media/image2.png)
-
-> ![](./media/image3.png)
+1.  Open a browser tab and copy and paste this link https://ai.azure.com/templates.If prompted to sign in, kindly sign in.
 
 2.  Click **Start building** in Microsoft Foundry to begin creating your
-    AI solution![](./media/image4.png)
+    AI solution
 
-> Note :(Alternatively) switch toggle to "New Foundry"
+     ![](./media/us11.png)
 
-3.  You should see a dialog prompting you to select a project to
-    continue
+      > Note :(Alternatively) switch toggle to "New Foundry"
 
-4.  Click the input area - you will see the ***Create a new
-    project*** option and select it
+3.  You should see a dialog prompting you to select a project to continue
 
-![](./media/image5.png)
+4.  Click the input area - you will see the ***Create a new project*** option and select it
+
+     ![](./media/us12.png)
 
 5.  Enter a unique project name i.e
-    Contoso-Travel-[**@lab.LabInstance.Id**](mailto:searchleaves@lab.LabInstance.Id),
-    select your subscription and resource group, then click **Create**
-    to set up your Microsoft Foundry project.
+    - **Contoso-Travel-<inject key="DeploymentID" enableCopy="false"/> (1)**
+    - Select the default **subscription (2)**
+    - Resource group: **Agentic AI (3)**
+    - Click **Create (4)** to set up your Microsoft Foundry project.
 
-> ![](./media/image6.png)
+       ![](./media/us13.png)
 
-6.  The project creation process may take a few minutes to
-    complete.![](./media/image7.png)
-
-7.  You should now see your Foundry project landing page. **Take note of
-    the Project Endpoint information shown here** - we will use it
+6.  The project creation process may take a few minutes to complete.
+   
+7.  You should now see your Foundry project landing page. **Take note of the Project Endpoint information shown here** - we will use it
     later.
 
-![](./media/image8.png)
-
-![](./media/image9.png)
+     ![](./media/us14.png)
 
 ### Task 2: Create an AI Agent
 
@@ -122,23 +106,19 @@ users plan trips and provide relevant recommendations. You will define
 the agent’s identity, deploy it, and test its functionality using the
 playground interface.
 
-1.  Click **Start building**, then select **Create agents** to begin
-    creating a new AI agent in Microsoft Foundry.
+1.  Click **Build (1)**, then select **Create agent (2)** to begin creating a new AI agent in Microsoft Foundry.
 
-![](./media/image10.png)
+    ![](./media/us15.png)
 
-2.  Enter the Agent name as +++**contoso-travel-portal**+++ and click
-    on **Create** to create the Agent.
+2.  Enter the Agent name as **contoso-travel-portal (1)** and click on **Create (2)** to create the Agent.
 
-> ![](./media/image11.png)
+    ![](./media/us16.png)
 
 3.  This takes a few minutes to complete
 
-> ![](./media/image12.png)
-
 4.  The agent is now ready to test in playground
 
-> ![](./media/image13.png)
+     ![](./media/us17.png)
 
 ### Task 3: Create Application Insights
 
@@ -148,24 +128,18 @@ agent activity, collect telemetry data, and analyze system performance.
 This is a critical step in understanding how your agent behaves in
 real-time and identifying potential issues.
 
-1.  On the Microsoft Foundry home page, select the **Traces** tab. Then
-    click **Create** Application Insights to set up monitoring for your
-    project.
+1.  On the Microsoft Foundry home page, select the **Traces (1)** tab. Then  click **Create (2)** Application Insights to set up monitoring for your project.
 
-![](./media/image14.png)
+    ![](./media/us18.png)
 
-2.  To Create App Insights enter the below details, accept the default
-    values in the other fields and click on **Create**.
+2.  To Create App Insights  under Application insinghts resource: **Create new resource(1)**, accept the default
+    values in the other fields and click on **Create (2)**.
 
-- Application insinghts resource: Create new resource
-
-- Name: Contoso-Travel-XXXX-appinsights-XXXX
-
-![](./media/image15.png)
+    ![](./media/us19.png)
 
 3.  App Insights has been created.
 
-> ![](./media/image16.png)
+     ![](./media/us20.png)
 
 ### Task 4: Test the Agent Prompt
 
@@ -175,197 +149,195 @@ execute sample queries, and evaluate the responses. This helps ensure
 that the agent provides accurate, relevant, and user-friendly outputs
 while adhering to its intended role
 
-1.  Navigate to the **Playground** tab, then click **Chat with agent**
-    to test your agent prompt and view responses.
+1.  Navigate to the **Playground** tab,  to test your agent prompt and view responses.
 
-![](./media/image17.png)
+    ![](./media/us21.png)
 
-2.  In the Playground tab, update the Instructions section with your
-    agent prompt, then use the chat panel to test how the agent
-    responds.
+2.  In the Playground tab, update the Instructions (1) section with your  agent prompt, and click on **Save (2)**
 
-You are the Contoso Travel Concierge, a friendly and knowledgeable
-travel assistant.
+    ```
+    You are the Contoso Travel Concierge, a friendly and knowledgeable
+    travel assistant.
+    
+    Your responsibilities:
+    
+    \- Help customers plan trips by answering questions about destinations,
+    travel tips, and logistics
+    
+    \- Provide helpful, accurate, and concise travel advice
+    
+    \- Be warm and professional in your responses
+    
+    \- When you don't have specific data, provide general travel guidance
+    
+    \- Always mention that Contoso Travel can help with flights, hotels, and
+    car rentals
+    
+    \- Use the provided tools to look up relevant information for the
+    request and provide citations. Keep responses short, factual and
+    friendly.
+    
+    Tool Usage Guidelines:
+    
+    \- ALWAYS use the web_search tool before providing or citing any
+    current, real-world data such as hotel prices, weather forecasts, flight
+    or hotel availability, or other time-sensitive information. Do NOT
+    fabricate real-time external data or rely on prior training data for
+    such facts; only provide them after confirming with a tool call.
+    
+    \- For vague or broad user queries (e.g., vague destination or service
+    requests), proactively use web_search to gather suggestions and relevant
+    information, AND ask clarifying questions as needed. Do not limit
+    yourself to only follow-up queries—use web_search to supply initial
+    helpful ideas.
+    
+    \- For requests that are outside your scope (e.g., Python scripting,
+    stock advice, or any non-travel topic), politely decline and clarify
+    that you are a travel assistant only, and whenever possible, redirect
+    the user with a helpful travel suggestion or resource. For safety or
+    policy-violating requests (e.g., sneaking prohibited items, evading
+    sanctions), firmly refuse, clearly explaining why you cannot assist,
+    referencing safety, legality, or policy as needed.
+    ```
 
-Your responsibilities:
+     ![](./media/us22.png)
 
-\- Help customers plan trips by answering questions about destinations,
-travel tips, and logistics
-
-\- Provide helpful, accurate, and concise travel advice
-
-\- Be warm and professional in your responses
-
-\- When you don't have specific data, provide general travel guidance
-
-\- Always mention that Contoso Travel can help with flights, hotels, and
-car rentals
-
-\- Use the provided tools to look up relevant information for the
-request and provide citations. Keep responses short, factual and
-friendly.
-
-Tool Usage Guidelines:
-
-\- ALWAYS use the web_search tool before providing or citing any
-current, real-world data such as hotel prices, weather forecasts, flight
-or hotel availability, or other time-sensitive information. Do NOT
-fabricate real-time external data or rely on prior training data for
-such facts; only provide them after confirming with a tool call.
-
-\- For vague or broad user queries (e.g., vague destination or service
-requests), proactively use web_search to gather suggestions and relevant
-information, AND ask clarifying questions as needed. Do not limit
-yourself to only follow-up queries—use web_search to supply initial
-helpful ideas.
-
-\- For requests that are outside your scope (e.g., Python scripting,
-stock advice, or any non-travel topic), politely decline and clarify
-that you are a travel assistant only, and whenever possible, redirect
-the user with a helpful travel suggestion or resource. For safety or
-policy-violating requests (e.g., sneaking prohibited items, evading
-sanctions), firmly refuse, clearly explaining why you cannot assist,
-referencing safety, legality, or policy as needed.
-
-![](./media/image18.png)
-
-3.  **Save** the agent 
-
-![](./media/image19.png)
-
-4.  Enter +++Hi. I'm thinking about planning a trip to Paris. What
-    should I know?+++ and select **Send**
-
-> ![](./media/image20.png)
+4.  Enter the below in the chat panel and select **Send**
+   
+   ```
+    Hi. I'm thinking about planning a trip to Paris. What should I know? 
+   ```
+ 
+   ![](./media/us23.png)
 
 5.  Observe the response.
 
-> ![](./media/image21.png)
+    ![](./media/us24.png)
 
-6.  Click on the **Metrics** link above the response panel - it shows
-    you available evaluators.
+6.  Click on the **Metrics** link above the response panel - it shows  you available evaluators.
 
-> ![](./media/image22.png)
+    ![](./media/us25.png)
 
-7.  Customize the list to reflect evaluation criteria you want to use -
-    try a new request.
+7.  Customize the list to reflect evaluation criteria you want to use and try a new request.
 
-+++Hi. I'm thinking about planning a trip to Paris. What should I
-know?+++
+     ```
+        Hi. I'm thinking about planning a trip to Paris. What should I know? 
+     ```    
 
-![](./media/image23.png)
+     ![](./media/us26.png)
 
-8.  Observe the *AI Quality* and *Safety* metrics in the line below the
-    response.
+8.  Observe the *AI Quality* and *Safety* metrics in the line below the response.
 
-9.  Hover over each number - you should see the custom metrics used and
-    their Pass/Fail status
+9.  Hover over each number - you should see the custom metrics used and their Pass/Fail status
 
-![](./media/image24.png)
+    ![](./media/us27.png)
 
 10. Select **Configuration**
 
-![](./media/image25.png)
+    ![](./media/us28.png)
 
 11. Enter the details
 
-**Display name**  
-+++Contoso Travel Assistant+++
+- **Display name (1)**: Contoso Travel Assistant
+- **Description (2)**
 
-**Description**  
-+++Welcome to Contoso Travel. We can help you plan your next itinerary
-with flight bookings, car rentals and hotel reservations. Just tell us
-your destination and the number of travellers in your group - and we'll
-do the rest.+++
+   ```
+        Welcome to Contoso Travel. We can help you plan your next itinerary
+        with flight bookings, car rentals and hotel reservations. Just tell us
+       your destination and the number of travellers in your group - and we'll
+       do the rest. 
+     ```  
+-**Starter prompts (3)**
 
-**Starter prompts**
+      ```
+       - I want to plan a multi-day travel itinerary
+      ```
+      ```
+       - I want to rent a car at my travel destination
+      ```
+     ```
+      - I want to book a flight and hotel for my travels
+    ```
 
-- +++I want to plan a multi-day travel itinerary +++
+- Click on **Reset (4)**
 
-- +++I want to rent a car at my travel destination+++
+    ![](./media/us29.png)
 
-- +++I want to book a flight and hotel for my travels+++
+12. In the Test pane, enter the below and click **Send.**
 
-**Voice mode**  
-Voice mode is disabled.  
-Please enable it in the agent settings.
+       ```
+           I want to plan a multi-day travel itinerary
+        ```
 
-**Reset**
+   ![](./media/us30.png)
 
-![](./media/image26.png)
+13. View the response. The agent will prompt you for additional information as instructed.
 
-12. In the Test pane, enter +++I want to plan a multi-day travel
-    itinerary+++ and click **Send.**
+    ![](./media/us31.png)
 
-> ![](./media/image27.png)
+14. Enter the following text and click on the **Submit icon** as shown in the below image.
 
-13. View the response. The agent will prompt you for addition
-    information as instructed.
+        ```
+           Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my
+          family (3 people total). We are vegetarian. We love sports, historic
+          homes, art and food tours
+        ```
 
-![](./media/image28.png)
-
-14. Enter the following text and click on the **Submit icon** as shown
-    in the below image.
-
-+++Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my
-family (3 people total). We are vegetarian. We love sports, historic
-homes, art and food tours+++.
-
-> ![](./media/image29.png)
+       ![](./media/us32.png)
 
 15. Note how the agent remembers and uses context from the history.
 
-![](./media/image30.png)
+     ![](./media/us33.png)
 
-16. Click the **Traces** tab - you should see rows for each conversation
-    run
+16. Click the **Traces** tab - you should see rows for each conversation run
 
-![](./media/image31.png)
+    ![](./media/us34.png)
 
-17. Want to understand what the Trace ID is showing - try **Ask AI**
+17. Want to understand what the Trace ID is showing - try **Ask AI** and enter the below prompt and click on **Send**
 
-> +++Explain what the trace ID is showing+++
+   ```
+     Explain what the trace ID is showing
+           
+   ```
+ 
+   ![](./media/us35.png)
 
-![](./media/image32.png)
+   ![](./media/us36.png)
 
-![](./media/image33.png)
-
-![](./media/image34.png)
+   ![](./media/us37.png)
 
 18. Click on the Trace ID - you should see something like this:
 
-![](./media/image35.png)
+    ![](./media/us38.png)
 
-![](./media/image36.png)
+    ![](./media/us39.png)
 
-19. Click **Preview**, then select **Preview agent** to test your agent
-    in a sample application interface.
+19. Click **Preview (1)**, then select **Preview agent (2)** to test your agent in a sample application interface.
 
-![](./media/image37.png)
+    ![](./media/us40.png)
 
-![](./media/image38.png)
+    ![](./media/us41.png)
 
-20. Enter the following text and click on the **Submit icon** as shown
-    in the below image.
+20. Enter the following text and click on the **Submit icon** as shown in the below image.
 
-+++I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for
-Paris and returning Jul 5. I am traveling with my family (3 people
-total). We are vegetarians. We love sports, historic homes and art and
-food tours. Plan my itinerary and show me hotels and flights for my
-stay+++
+   ```
+   I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for
+   Paris and returning Jul 5. I am traveling with my family (3 people
+   total). We are vegetarians. We love sports, historic homes and art and
+   food tours. Plan my itinerary and show me hotels and flights for my
+   stay
+           
+   ```
 
-![](./media/image39.png)
-
-Note that the preview shows configured starter prompts
+   ![](./media/us42.png)
 
 21. You can review the agent response in the preview tab itself
 
-![](./media/image40.png)
+    ![](./media/us43.png)
 
-But note that if you return to agent you can now see this interaction
-captured in the traces as well.
+22. Note that if you return to agent you can now see this interaction captured in the traces as well.
 
-![](./media/image41.png)
+    ![](./media/us44.png)
 
 ### Task 5: Explore Evaluations Tab
 
@@ -382,37 +354,39 @@ also invoke *code-first*.
 
 1.  Click on the **Evaluations** item in the sidebar menu.
 
-![](./media/image42.png)
+    ![](./media/us45.png)
 
-2.  Select the **Evaluators catalog** to see the full list of supported
-    evaluators
+2.  Select the **Evaluators catalog** to see the full list of supported evaluators
 
-![](./media/image43.png)
+     ![](./media/us46.png)
 
 3.  Filter to see evaluators for a particular category - e.g., agents
 
-![](./media/image44.png)
+    ![](./media/us47.png)
 
-![](./media/image45.png)
+    ![](./media/us48.png)
 
 4.  Use "Ask AI" to get explanations for any of them - e.g., ask:
 
-+++tell me more about the Protected-Material evaluator+++
+    ```
+    Tell me more about the Protected-Material evaluator
+               
+    ```
+   ![](./media/us49.png)
 
-![](./media/image46.png)
+5.  Click the **Create** button.
 
-![](./media/image47.png)
+    ![](./media/us50.png)
 
-5.  Click the **Create **button. You should see this dialog. This is the
-    workflow to create a +++*customevaluator+++* to cover criteria
-    specific to your requirements that are not covered by built-in
-    evaluators. 
+6. Give the following details
+   - Workflow name as **customevaluator (1)**
+   - Category: **Agents (2)**
+   - Scoring Method: **Ordinal[1-5] (3)**
+   - Click on **Create (4)**
 
-> ![](./media/image48.png)
->
-> ![](./media/image49.png)
+    ![](./media/us51.png)
 
-![](./media/image50.png)
+    ![](./media/us52.png)
 
 ### Task 6: Run a Red Teaming Scan
 
@@ -421,29 +395,26 @@ robustness and safety of your AI agent. By simulating adversarial
 scenarios, you can identify vulnerabilities and ensure that the agent
 behaves responsibly under different conditions.
 
-1.  Navigate to the **Evaluations** section, select the **Red team
-    (Preview)** tab, then click **Create** to start a new red teaming
-    run.![](./media/image51.png)
+1.  Navigate to the **Evaluations (1)** section, select the **Red team (Preview) (2)** tab, then click **Create (3)** to start a new red teaming run.
 
-> ![](./media/image52.png)
+    ![](./media/us53.png)
 
-2.  For now, select the *Model* option and pick the default model used
-    in your agent (e.g, gpt-4.1)
+2.  For now, select the **Model (1)** option and pick the default model used  in your agent e.g, gpt-4.1(2) and click **Next (3)**
 
-> ![](./media/image53.png)
+   ![](./media/us54.png)
 
 3.  Click on Next
 
-![](./media/image54.png)
+   ![](./media/image54.png)
 
 4.  Submit the scan. This takes a while to complete - we will revisit it
     later.
 
-![](./media/image55.png)
+    ![](./media/us56.png)
 
-![](./media/image56.png)
+    ![](./media/us57.png)
 
-![](./media/image57.png)
+    ![](./media/us58.png)
 
 **Continue Exercise 2……………..**
 
