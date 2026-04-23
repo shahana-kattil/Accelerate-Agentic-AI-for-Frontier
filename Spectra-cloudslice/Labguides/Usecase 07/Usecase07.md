@@ -73,7 +73,7 @@ project.
 2.  Click **Start building** in Microsoft Foundry to begin creating your
     AI solution
 
-     ![](./media/us11.png)
+     ![](./media/us11.1.png)
 
       > Note :(Alternatively) switch toggle to "New Foundry"
 
@@ -81,7 +81,7 @@ project.
 
 4.  Click the input area - you will see the ***Create a new project*** option and select it
 
-     ![](./media/us12.png)
+     ![](./media/us12.1.png)
 
 5.  Enter a unique project name i.e
     - **Contoso-Travel-<inject key="DeploymentID" enableCopy="false"/> (1)**
@@ -96,7 +96,7 @@ project.
 7.  You should now see your Foundry project landing page. **Take note of the Project Endpoint information shown here** - we will use it
     later.
 
-     ![](./media/us14.png)
+     ![](./media/us14.1.png)
 
 ### Task 2: Create an AI Agent
 
@@ -118,7 +118,7 @@ playground interface.
 
 4.  The agent is now ready to test in playground
 
-     ![](./media/us17.png)
+     ![](./media/us17.1.png)
 
 ### Task 3: Create Application Insights
 
@@ -208,15 +208,15 @@ while adhering to its intended role
     Hi. I'm thinking about planning a trip to Paris. What should I know? 
    ```
  
-   ![](./media/us23.png)
+   ![](./media/us23.1.png)
 
 5.  Observe the response.
 
-    ![](./media/us24.png)
+    ![](./media/us24.1.png)
 
 6.  Click on the **Metrics** link above the response panel - it shows  you available evaluators.
 
-    ![](./media/us25.png)
+    ![](./media/us25.1.png)
 
 7.  Customize the list to reflect evaluation criteria you want to use and try a new request.
 
@@ -224,7 +224,7 @@ while adhering to its intended role
         Hi. I'm thinking about planning a trip to Paris. What should I know? 
      ```    
 
-     ![](./media/us26.png)
+     ![](./media/us26.1.png)
 
 8.  Observe the *AI Quality* and *Safety* metrics in the line below the response.
 
@@ -290,11 +290,11 @@ while adhering to its intended role
 
 15. Note how the agent remembers and uses context from the history.
 
-     ![](./media/us33.png)
+     ![](./media/us33.1.png)
 
 16. Click the **Traces** tab - you should see rows for each conversation run
 
-    ![](./media/us34.png)
+    ![](./media/us34.1.png)
 
 17. Want to understand what the Trace ID is showing - try **Ask AI** and enter the below prompt and click on **Send**
 
