@@ -2,18 +2,7 @@
 
 **Introduction**
 
-In modern AI-driven applications, managing multiple AI agents, ensuring
-their reliability, and maintaining visibility into their behavior is
-essential. This scenario focuses on implementing centralized governance
-and observability using Microsoft Foundry Control Plane. The lab walks
-through the complete lifecycle of AI agents—from creation and
-configuration to monitoring, evaluation, and security testing. By
-leveraging built-in capabilities such as tracing, Application Insights
-integration, evaluation frameworks, and red teaming, this use case
-demonstrates how organizations can build AI systems that are
-transparent, secure, and production-ready. The Contoso Travel scenario
-serves as a practical example to illustrate how intelligent agents can
-be governed and observed effectively within a unified platform.
+In modern AI-driven applications, managing multiple AI agents, ensuring their reliability, and maintaining visibility into their behavior is essential. This scenario focuses on implementing centralized governance and observability using Microsoft Foundry Control Plane. The lab walks through the complete lifecycle of AI agents—from creation and configuration to monitoring, evaluation, and security testing. By leveraging built-in capabilities such as tracing, Application Insights integration, evaluation frameworks, and red teaming, this use case demonstrates how organizations can build AI systems that are transparent, secure, and production-ready. The Contoso Travel scenario serves as a practical example to illustrate how intelligent agents can be governed and observed effectively within a unified platform.
 
 **Objectives**
 
@@ -47,31 +36,17 @@ be governed and observed effectively within a unified platform.
 
 ## Exercise 1: Foundry Project Environment Setup and Configuration
 
-In this exercise, you will establish the foundational setup required to
-begin working with AI agents in Microsoft Foundry. The focus is on
-creating a project environment, configuring essential resources, and
-understanding the basic workflow of agent development. You will create a
-Foundry project, define an AI agent, and enable monitoring using Azure
-Application Insights. Additionally, you will explore how to test agent
-prompts, analyze responses, and review evaluation metrics. This exercise
-provides the necessary groundwork for building, monitoring, and
-governing AI agents effectively.
+In this exercise, you will establish the foundational setup required to begin working with AI agents in Microsoft Foundry. The focus is on creating a project environment, configuring essential resources, and understanding the basic workflow of agent development. You will create a Foundry project, define an AI agent, and enable monitoring using Azure Application Insights. Additionally, you will explore how to test agent prompts, analyze responses, and review evaluation metrics. This exercise provides the necessary groundwork for building, monitoring, and governing AI agents effectively.
 
 ### **Task 1:** Microsoft Foundry project
 
-This task introduces you to the process of setting up your Microsoft
-Foundry project. You will access the Foundry portal, create a new
-project, and configure it with the appropriate subscription and resource
-group. This step is essential as it establishes the environment where
-all subsequent AI development and management activities will take place.
+This task introduces you to the process of setting up your Microsoft Foundry project. You will access the Foundry portal, create a new project, and configure it with the appropriate subscription and resource group. This step is essential as it establishes the environment where all subsequent AI development and management activities will take place.
 
-Follow the steps below to complete the setup of your Microsoft Foundry
-project.
+Follow the steps below to complete the setup of your Microsoft Foundry project.
 
 1.  Open a browser tab and copy and paste this link https://ai.azure.com/templates.If prompted to sign in, kindly sign in.
 
-2.  Click **Start building** in Microsoft Foundry to begin creating your
-    AI solution
+2.  Click **Start building** in Microsoft Foundry to begin creating your AI solution
 
      ![](./media/us11.1.png)
 
@@ -93,18 +68,13 @@ project.
 
 6.  The project creation process may take a few minutes to complete.
    
-7.  You should now see your Foundry project landing page. **Take note of the Project Endpoint information shown here** - we will use it
-    later.
+7.  You should now see your Foundry project landing page. **Take note of the Project Endpoint information shown here** - we will use it later.
 
      ![](./media/us14.1.png)
 
 ### Task 2: Create an AI Agent
 
-In this task, you will create your first AI agent within the Foundry
-environment. The agent will act as a travel assistant designed to help
-users plan trips and provide relevant recommendations. You will define
-the agent’s identity, deploy it, and test its functionality using the
-playground interface.
+In this task, you will create your first AI agent within the Foundry environment. The agent will act as a travel assistant designed to help users plan trips and provide relevant recommendations. You will define the agent’s identity, deploy it, and test its functionality using the playground interface.
 
 1.  Click **Build (1)**, then select **Create agent (2)** to begin creating a new AI agent in Microsoft Foundry.
 
