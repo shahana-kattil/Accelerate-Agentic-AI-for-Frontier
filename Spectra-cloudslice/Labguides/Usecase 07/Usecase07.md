@@ -404,11 +404,11 @@ behaves responsibly under different conditions.
 
 2.  For now, select the **Model (1)** option and pick the default model used  in your agent e.g, gpt-4.1(2) and click **Next (3)**
 
-   ![](./media/us54.png)
+    ![](./media/us54.png)
 
 3.  Click on Next
 
-   ![](./media/us55.png)
+    ![](./media/us55.png)
 
 4.  Submit the scan. This takes a while to complete - we will revisit it
     later.
