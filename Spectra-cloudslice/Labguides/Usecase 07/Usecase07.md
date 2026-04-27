@@ -491,29 +491,29 @@ and the Foundry project.
 
 1.  To install dependencies, run the first cell in the notebook
 
-   ![](./media/usx18.png)
+    ![](./media/usx18.png)
 
 1. Restart the Kernel by clicking on **Restart**.In the pop-up that appears click on Restart again
    
-   ![](./media/usx21.png)
+    ![](./media/usx21.png)
 
 1.  Load and validate the environment variables from the shared .env  file by running the second cell in the notebook.
 
-   ![](./media/usx19.png)
+    ![](./media/usx19.png)
 
-   ![](./media/usx20.png)
+    ![](./media/usx20.png)
 
 1.  Verify that you can connect to your Microsoft Foundry project using the SDK by running the 3^(rd) cell in the notebook.
 
-   ![](./media/usx22.png)
+    ![](./media/usx22.png)
 
-   ![](./media/usx23.png)
+    ![](./media/usx23.png)
 
 1.  Run the cell under **Validate OpenAI Client** to verify that your OpenAI client is correctly configured and responding.
 
-   ![](./media/usx24.png)
+    ![](./media/usx24.png)
 
-   ![](./media/usx25.png)
+    ![](./media/usx25.png)
 
 1.  Explore the Contoso Travel sample data by running the 5^(th), 6^(th), 7^(th) and 8^(th) cells in the notebook.
 
